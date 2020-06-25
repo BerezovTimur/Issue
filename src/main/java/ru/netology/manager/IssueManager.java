@@ -32,7 +32,7 @@ public class IssueManager {
         Comparator byNew = Comparator.naturalOrder();
         List<Issue> issues = new ArrayList<>();
         issues.addAll(repository.findAll());
-        ((ArrayList<Issue>) issues).sort(byNew);
+        issues.sort(byNew);
         return issues;
     }
 
@@ -40,7 +40,7 @@ public class IssueManager {
         Comparator ByEarly = Comparator.reverseOrder();
         List<Issue> issues = new ArrayList<>();
         issues.addAll(repository.findAll());
-        ((ArrayList<Issue>) issues).sort(ByEarly);
+        issues.sort(ByEarly);
         return issues;
     }
 
